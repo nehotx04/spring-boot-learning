@@ -20,6 +20,6 @@ public class User {
     private String lastname;
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Task> tasks = new ArrayList<>();
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
+    private List<Task> task;
 }

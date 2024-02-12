@@ -15,4 +15,8 @@ public class Task {
     private String description;
     private Boolean completed;
 
+    @ManyToOne
+    @JoinColumn(name="userId", referencedColumnName = "id")
+    private User user;
+
 }
